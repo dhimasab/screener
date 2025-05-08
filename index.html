@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crypto MA Screener</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>📊 Crypto MA Screener</h1>
+
+  <label>
+    Timeframe:
+    <select id="timeframe">
+      <option value="daily" selected>Daily</option>
+      <option value="weekly">Weekly</option>
+    </select>
+  </label>
+
+  <label>
+    MA:
+    <select id="maLength">
+      <option value="50">MA50</option>
+      <option value="100" selected>MA100</option>
+      <option value="200">MA200</option>
+    </select>
+  </label>
+
+  <label>
+    <input type="radio" name="filterDirection" value="above" checked> Di atas MA
+  </label>
+  <label>
+    <input type="radio" name="filterDirection" value="below"> Di bawah MA
+  </label>
+
+  <br><br>
+  <button id="startBtn">🚀 Mulai Screening</button>
+  <p id="loading"></p>
+
+  <table id="results">
+    <thead>
+      <tr>
+        <th>Token</th>
+        <th>Harga</th>
+        <th>MA</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="results-body"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
